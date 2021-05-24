@@ -1,80 +1,71 @@
 .nav {
+  width: 100%;
   position: fixed;
   bottom: 0px;
-  width: 100%;
-  background-color: #f9f9f9;
+  background-color: #f9f9fa;
   padding: 20px 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
-  border-top: solid 2px rgba(0, 0, 0, 0.15);
 }
+
 .nav__list {
   display: flex;
   justify-content: space-between;
 }
-.nav__link {
-  position: relative;
-  color: #292d32;
-}
 
+.nav__link {
+  color: #2e363e;
+  position: relative;
+}
 @keyframes notificationAnimation {
   0% {
-    transform: none;
+    transform: 0;
   }
   50% {
-    transform: translatey(-10px) rotateY(360deg);
+    transform: translateY(-8px) rotateY(180deg);
   }
   100% {
-    transform: none;
+    transform: 0;
   }
 }
 
 .nav__notification {
-  background-color: tomato;
-  width: 25px;
-  height: 25px;
-  display: block;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: 700;
   position: absolute;
-  left: 20px;
+  right: -15px;
   bottom: 15px;
   animation: notificationAnimation 2s ease-in-out infinite;
 }
-
-.nav__moreoption {
-  background-color: tomato;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  position: absolute;
-  left: 30px;
-}
-
-@keyframes appearBtnAnimation {
+@keyframes apprearBtnAnimation {
   from {
     opacity: 0;
   }
-
   to {
-    transform: none;
     opacity: 1;
+    transform: none;
   }
 }
+
 .nav__btn {
-  transform: translatey(50px);
-  opacity: 0;
-  animation: appearBtnAnimation 0.5s ease-in-out forwards;
+  transform: translateY(70px);
+  animation: apprearBtnAnimation 1s ease-in-out forwards;
 }
+
 .nav__btn:nth-child(2) {
-  animation-delay: 0.2s;
+  animation-delay: 0.3s;
 }
 .nav__btn:nth-child(3) {
-  animation-delay: 0.5s;
+  animation-delay: 0.6s;
 }
 .nav__btn:last-child {
-  animation-delay: 0.8s;
+  animation-delay: 0.9s;
+}
+
+.nav__add {
+  background-color: tomato;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  position: absolute;
+  right: -2px;
+  bottom: 28px;
 }
